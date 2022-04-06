@@ -56,9 +56,9 @@ def review(message):
   bot.register_next_step_handler(message,review_answer)
 
 def review_answer(message):
-  if message == "да" :
+  if message.text == "да" :
     bot.send_message(message.chat.id,"я рад что ты доволен роботой бота!")
-  if message == "нет" :
+  if message.text == "нет" :
     bot.send_message(message.chat.id,"мне очень важен твой отзыв,пожалуйста напиши поподробние что не так на почту yankingeorge2@gmail.com")
 
 @server.route('/' + TOKEN, methods=['POST'])
