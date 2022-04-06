@@ -61,8 +61,6 @@ def review_answer(message):
   if message == "нет" :
     bot.send_message(message.chat.id,"мне очень важен твой отзыв,пожалуйста напиши поподробние что не так на почту yankingeorge2@gmail.com")
 
-bot.polling(none_stop = True)
-
 @server.route('/' + TOKEN, methods=['POST'])
 def getMessage():
     json_string = request.get_data().decode('utf-8')
